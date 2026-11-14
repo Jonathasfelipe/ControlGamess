@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 384" role="img" aria-labelledby="title desc">
+  <title id="title">Blindado de assalto orbital</title><desc id="desc">Invasor pesado de blindagem segmentada, placas rebitadas e três sensores de mira.</desc>
+  <defs>
+    <linearGradient id="armor" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#5b5d60"/><stop offset=".25" stop-color="#303236"/><stop offset="1" stop-color="#101114"/></linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6c292e"/><stop offset="1" stop-color="#1e1013"/></linearGradient>
+  </defs>
+  <ellipse cx="256" cy="211" rx="176" ry="121" fill="#000" opacity=".5"/>
+  <path d="m170 37 172 0 39 36 35 0 42 63-23 124-68 61H145l-68-61-23-124 42-63 35 0z" fill="url(#armor)" stroke="#898b8f" stroke-width="7" stroke-linejoin="round"/>
+  <path d="m179 52 154 0 27 32 39 4 24 54-21 102-58 53H168l-58-53-21-102 24-54 39-4z" fill="#202226" stroke="#505257" stroke-width="5"/>
+  <path d="m205 83 51-28 51 28 19 63-28 68-42 30-42-30-28-68z" fill="url(#core)" stroke="#a33840" stroke-width="5"/>
+  <path d="m224 101 32-19 32 19 9 39-41 24-41-24z" fill="#111216" stroke="#b14a49" stroke-width="4"/>
+  <circle cx="256" cy="124" r="13" fill="#8fff82" stroke="#d7f0c4" stroke-width="4"/>
+  <path d="m242 171h28l12 30-26 21-26-21z" fill="#a32733" stroke="#e34a4d" stroke-width="4"/>
+  <path d="m77 152 91-16m-81 48 75-12m273-20-91-16m81 48-75-12" stroke="#797b7f" stroke-width="10"/>
+  <path d="m85 151 30-6m312 6-30-6" stroke="#bd313b" stroke-width="7"/>
+  <g fill="#17191d" stroke="#7f8185" stroke-width="4"><path d="m74 224 78-6-11 48-62 12z"/><path d="m438 224-78-6 11 48 62 12z"/></g>
+  <path d="m96 240 37-3m283 3-37-3" stroke="#df4546" stroke-width="8"/>
+  <g fill="#c0c2c5"><circle cx="142" cy="79" r="5"/><circle cx="370" cy="79" r="5"/><circle cx="110" cy="275" r="5"/><circle cx="402" cy="275" r="5"/><circle cx="215" cy="280" r="4"/><circle cx="297" cy="280" r="4"/></g>
+  <path d="m197 279 13 44m105-44-13 44" stroke="#8d3038" stroke-width="15" stroke-linecap="round"/>
+  <path d="m201 312 9 21m101-21-9 21" stroke="#f05245" stroke-width="7" stroke-linecap="round"/>
+</svg>

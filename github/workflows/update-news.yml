@@ -1,0 +1,75 @@
+name: Atualizar notícias do Control Games
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: control-games-news-feed
+  cancel-in-progress: true
+
+jobs:
+  update-feed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Buscar os feeds e gerar o arquivo público
+        shell: bash
+        run: |
+          node server.mjs >/tmp/control-games-news-server.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+
+          for attempt in $(seq 1 30); do
+            if curl --silent --fail --max-time 30 http://127.0.0.1:4173/api/news -o /tmp/news-feed-candidate.json; then
+              break
+            fi
+            sleep 2
+          done
+
+          node --input-type=module <<'NODE'
+          import { readFileSync, writeFileSync } from 'node:fs';
+
+          const candidate = JSON.parse(readFileSync('/tmp/news-feed-candidate.json', 'utf8'));
+          if (!Array.isArray(candidate.items) || candidate.items.length === 0) {
+            throw new Error('O endpoint não retornou notícias. O feed publicado foi preservado.');
+          }
+
+          let previous = null;
+          try { previous = JSON.parse(readFileSync('news-feed.json', 'utf8')); } catch {}
+          const unchanged = previous
+            && previous.sourcesAvailable === candidate.sourcesAvailable
+            && JSON.stringify(previous.items) === JSON.stringify(candidate.items);
+
+          if (!unchanged) {
+            writeFileSync('news-feed.json', JSON.stringify(candidate, null, 2) + '\n');
+          }
+          NODE
+
+      - name: Publicar alterações no feed
+        shell: bash
+        run: |
+          if [[ -z "$(git status --porcelain -- news-feed.json)" ]]; then
+            echo "Nenhuma notícia mudou desde a última publicação."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add news-feed.json
+          git commit -m "Atualiza feed de notícias"
+          git push origin main

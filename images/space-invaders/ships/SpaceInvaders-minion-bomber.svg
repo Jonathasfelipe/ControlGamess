@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 384" role="img" aria-labelledby="title desc">
+  <title id="title">Bombardeiro Martelo</title><desc id="desc">Aeronave inimiga pesada com duas naceles de bombas, blindagem facetada e canhões laterais.</desc>
+  <defs>
+    <linearGradient id="hull" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#6b6d70"/><stop offset=".18" stop-color="#35373b"/><stop offset=".65" stop-color="#1b1c20"/><stop offset="1" stop-color="#08090b"/></linearGradient>
+    <linearGradient id="pod" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#54565a"/><stop offset=".5" stop-color="#222428"/><stop offset="1" stop-color="#0a0b0d"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#e35a55"/><stop offset="1" stop-color="#321216"/></linearGradient>
+    <filter id="shadow" x="-.3" y="-.3" width="1.6" height="1.6"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+  <ellipse cx="256" cy="222" rx="203" ry="102" fill="#000" opacity=".58" filter="url(#shadow)"/>
+  <path d="m256 26 48 80 172 40-52 64 38 93-138-14-36 54h-64l-36-54-138 14 38-93-52-64 172-40z" fill="url(#hull)" stroke="#898b8f" stroke-width="7" stroke-linejoin="round"/>
+  <path d="m256 45 35 65 119 34-40 55 30 72-108-6-20 61h-32l-20-61-108 6 30-72-40-55 119-34z" fill="#202226" stroke="#4e5054" stroke-width="5"/>
+  <path d="m256 44 37 67-37 42-37-42z" fill="#111216" stroke="#9e2832" stroke-width="5"/>
+  <path d="m222 122 34-21 34 21-8 57-26 20-26-20z" fill="url(#glass)" stroke="#d44b50" stroke-width="4"/>
+  <path d="m241 137 15-11 15 11-5 27-10 9-10-9z" fill="#a7ff8b"/>
+  <g fill="url(#pod)" stroke="#85878b" stroke-width="5"><path d="m56 158 91-18 32 25-18 130-62 25-47-36 19-78z"/><path d="m456 158-91-18-32 25 18 130 62 25 47-36-19-78z"/></g>
+  <g fill="#151619" stroke="#ae3039" stroke-width="5"><path d="m96 220 48-8-10 58-35 17-22-18z"/><path d="m416 220-48-8 10 58 35 17 22-18z"/></g>
+  <g fill="#d1b57f" stroke="#191a1d" stroke-width="4"><path d="m111 272 20 0 8 35-18 31-18-31z"/><path d="m401 272-20 0-8 35 18 31 18-31z"/></g>
+  <path d="m114 334 7 19m277-19-7 19" stroke="#f4a24b" stroke-width="8" stroke-linecap="round"/>
+  <g fill="#111216" stroke="#a3a5a8" stroke-width="4"><path d="m178 208 25 13-5 28-22 8-17-20z"/><path d="m334 208-25 13 5 28 22 8 17-20z"/></g>
+  <path d="m192 241-17 23m145-23 17 23m-81-37h24" stroke="#b52e37" stroke-width="8" stroke-linecap="round"/>
+  <g fill="#c9cbce"><circle cx="83" cy="181" r="5"/><circle cx="429" cy="181" r="5"/><circle cx="202" cy="98" r="4"/><circle cx="310" cy="98" r="4"/></g>
+</svg>

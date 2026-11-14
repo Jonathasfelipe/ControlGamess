@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 680" role="img" aria-labelledby="title desc">
+  <title id="title">Perdidos no Espaço</title>
+  <desc id="desc">Nave de defesa diante de uma frota invasora em um campo estelar.</desc>
+  <defs>
+    <linearGradient id="space" x2="0" y2="1">
+      <stop stop-color="#101c2b"/>
+      <stop offset="1" stop-color="#05070c"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop stop-color="#39789a" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#39789a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ship" x2="0" y2="1">
+      <stop stop-color="#e7f5ff"/>
+      <stop offset=".45" stop-color="#5cc9e9"/>
+      <stop offset="1" stop-color="#195071"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="680" fill="url(#space)"/>
+  <circle cx="450" cy="300" r="390" fill="url(#glow)"/>
+  <g fill="#e5f3ff">
+    <circle cx="85" cy="83" r="3"/><circle cx="196" cy="62" r="2"/>
+    <circle cx="358" cy="103" r="2"/><circle cx="696" cy="77" r="3"/>
+    <circle cx="813" cy="168" r="2"/><circle cx="116" cy="322" r="2"/>
+    <circle cx="773" cy="383" r="3"/><circle cx="227" cy="472" r="2"/>
+    <circle cx="647" cy="464" r="2"/><circle cx="836" cy="539" r="2"/>
+  </g>
+  <g fill="#ff536b" opacity=".92">
+    <path d="M105 218h28v14h14v28h-14v14h-28v-14H91v-28h14z"/>
+    <path d="M742 202h28v14h14v28h-14v14h-28v-14h-14v-28h14z"/>
+    <path d="M174 310h20v10h10v20h-10v10h-20v-10h-10v-20h10z"/>
+    <path d="M690 324h20v10h10v20h-10v10h-20v-10h-10v-20h10z"/>
+  </g>
+  <g fill="#c8e8f5" opacity=".76">
+    <path d="M278 186h22v11h11v22h-11v11h-22v-11h-11v-22h11z"/>
+    <path d="M584 169h22v11h11v22h-11v11h-22v-11h-11v-22h11z"/>
+  </g>
+  <g transform="translate(450 342)">
+    <path d="M0-114 34-30 106 18 89 47 31 29 18 96 0 115-18 96-31 29-89 47-106 18-34-30z" fill="url(#ship)" stroke="#c4f3ff" stroke-width="5"/>
+    <path d="M0-60 15-17H-15z" fill="#fff"/>
+    <path d="M-23 61-10 111 0 132 10 111 23 61z" fill="#ffb35c" opacity=".9"/>
+  </g>
+  <path d="M0 548h900" stroke="#69d6f4" stroke-opacity=".32"/>
+  <text x="450" y="604" text-anchor="middle" fill="#f3f7fb" font-family="Arial,sans-serif" font-size="46" font-weight="800" letter-spacing="5">PERDIDOS NO ESPAÇO</text>
+  <text x="450" y="643" text-anchor="middle" fill="#85cce0" font-family="monospace" font-size="17" letter-spacing="7">DEFESA ORBITAL</text>
+</svg>

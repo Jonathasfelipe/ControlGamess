@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Fronteira Estelar — prancha de conceito visual</title>
+  <desc id="desc">Prancha vetorial com protagonista, auxiliares, esquadrão de inimigos e três chefes originais do jogo.</desc>
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#121419"/><stop offset="1" stop-color="#07080a"/></linearGradient>
+    <linearGradient id="card" x2="0" y2="1"><stop stop-color="#1b1d22"/><stop offset="1" stop-color="#0b0c0f"/></linearGradient>
+    <linearGradient id="hero" x2="0" y2="1"><stop stop-color="#d9dce0"/><stop offset=".2" stop-color="#81242e"/><stop offset=".55" stop-color="#24252a"/><stop offset="1" stop-color="#08090b"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#e3293c" stop-opacity=".32"/><stop offset="1" stop-color="#e3293c" stop-opacity="0"/></radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="16"/></filter>
+  </defs>
+  <rect width="1600" height="980" fill="url(#bg)"/>
+  <g fill="#dbe5f2" opacity=".55"><circle cx="52" cy="54" r="1.5"/><circle cx="240" cy="78" r="1"/><circle cx="518" cy="43" r="1.4"/><circle cx="710" cy="67" r="1"/><circle cx="982" cy="38" r="1.3"/><circle cx="1210" cy="78" r="1"/><circle cx="1495" cy="45" r="1.4"/><circle cx="1560" cy="180" r="1"/></g>
+  <text x="38" y="50" fill="#f0f1f3" font-family="Consolas,monospace" font-size="25" font-weight="700" letter-spacing="4">FRONTEIRA ESTELAR</text>
+  <text x="39" y="78" fill="#8f969f" font-family="Consolas,monospace" font-size="12" letter-spacing="2">PRANCHA DE SILHUETAS · VETOR ORIGINAL · METAL ESCURO / SINALIZAÇÃO RUBRA</text>
+  <path d="M38 94H1562" stroke="#3a3d42"/>
+
+  <rect x="38" y="115" width="400" height="345" rx="12" fill="url(#card)" stroke="#41454c"/>
+  <text x="62" y="150" fill="#55ff9a" font-family="Consolas,monospace" font-size="12" letter-spacing="2">01 / PILOTO E ESCOLTAS</text>
+  <ellipse cx="236" cy="287" rx="156" ry="104" fill="url(#glow)"/>
+  <g transform="translate(180 190) scale(1.15)" stroke-linejoin="round">
+    <path d="M50 2 60 25 96 46 87 59 63 51 58 66 50 72 42 66 37 51 13 59 4 46 40 25z" fill="url(#hero)" stroke="#c44950" stroke-width="2"/>
+    <path d="m50 12 8 27-2 23-6 7-6-7-2-23z" fill="#514338" stroke="#f0d5a4"/>
+    <path d="m42 28 8-11 8 11-3 10h-10z" fill="#e5e7e9" stroke="#fff"/>
+    <path d="M17 52h10v11H17zm56 0h10v11H73z" fill="#e3293c"/><path d="M19 62h6v8h-6zm50 0h6v8h-6z" fill="#ff9c4a"/>
+  </g>
+  <g transform="translate(104 296) scale(.49)" opacity=".9"><path d="M50 2 60 25 96 46 87 59 63 51 58 66 50 72 42 66 37 51 13 59 4 46 40 25z" fill="#22252a" stroke="#55ff9a" stroke-width="4"/><path d="m42 28 8-11 8 11-3 10h-10z" fill="#adb5b0"/><path d="M18 54h10v12H18zm54 0h10v12H72z" fill="#55ff9a"/></g>
+  <g transform="translate(300 296) scale(.49)" opacity=".9"><path d="M50 2 60 25 96 46 87 59 63 51 58 66 50 72 42 66 37 51 13 59 4 46 40 25z" fill="#211a1d" stroke="#ef5359" stroke-width="4"/><path d="m42 28 8-11 8 11-3 10h-10z" fill="#ded9dc"/><path d="M18 54h10v12H18zm54 0h10v12H72z" fill="#ef5359"/></g>
+  <text x="92" y="373" fill="#dadddf" font-family="Consolas,monospace" font-size="11">CARBONO RUBRO</text><text x="270" y="373" fill="#dadddf" font-family="Consolas,monospace" font-size="11">ESCOLTAS 1–2</text>
+  <text x="62" y="421" fill="#90969d" font-family="Consolas,monospace" font-size="11">Nave principal intacta · auxiliares acompanham a arma equipada</text>
+
+  <rect x="456" y="115" width="1106" height="345" rx="12" fill="url(#card)" stroke="#41454c"/>
+  <text x="480" y="150" fill="#55ff9a" font-family="Consolas,monospace" font-size="12" letter-spacing="2">02 / ESQUADRÃO ADVERSÁRIO</text>
+  <g font-family="Consolas,monospace" text-anchor="middle">
+    <image href="SpaceInvaders-minion-scout.svg" xlink:href="SpaceInvaders-minion-scout.svg" x="482" y="168" width="148" height="145" preserveAspectRatio="xMidYMid meet"/>
+    <image href="SpaceInvaders-minion-striker.svg" xlink:href="SpaceInvaders-minion-striker.svg" x="657" y="168" width="148" height="145" preserveAspectRatio="xMidYMid meet"/>
+    <image href="SpaceInvaders-minion-tank.svg" xlink:href="SpaceInvaders-minion-tank.svg" x="832" y="168" width="148" height="145" preserveAspectRatio="xMidYMid meet"/>
+    <image href="SpaceInvaders-minion-interceptor.svg" xlink:href="SpaceInvaders-minion-interceptor.svg" x="1007" y="168" width="148" height="145" preserveAspectRatio="xMidYMid meet"/>
+    <image href="SpaceInvaders-minion-bomber.svg" xlink:href="SpaceInvaders-minion-bomber.svg" x="1182" y="168" width="148" height="145" preserveAspectRatio="xMidYMid meet"/>
+    <image href="SpaceInvaders-minion-gunship.svg" xlink:href="SpaceInvaders-minion-gunship.svg" x="1357" y="168" width="148" height="145" preserveAspectRatio="xMidYMid meet"/>
+    <g fill="#e3e5e7" font-size="11"><text x="556" y="337">BATEDOR</text><text x="731" y="337">ATACANTE</text><text x="906" y="337">BLINDADO</text><text x="1081" y="337">VÍBORA</text><text x="1256" y="337">MARTELO</text><text x="1431" y="337">CERBERUS</text></g>
+    <g fill="#8e969f" font-size="9"><text x="556" y="356">rápido / top-down</text><text x="731" y="356">rajada / flanco</text><text x="906" y="356">duas cargas</text><text x="1081" y="356">entrada lateral</text><text x="1256" y="356">bombardeio</text><text x="1431" y="356">tríplice canhão</text></g>
+  </g>
+  <path d="M480 378H1538" stroke="#33363b"/>
+  <text x="480" y="411" fill="#a7adb4" font-family="Consolas,monospace" font-size="11">Entradas pelo alto e pelos flancos; nenhuma formação sobe desde a borda inferior.</text>
+
+  <rect x="38" y="482" width="1524" height="458" rx="12" fill="url(#card)" stroke="#41454c"/>
+  <text x="62" y="518" fill="#55ff9a" font-family="Consolas,monospace" font-size="12" letter-spacing="2">03 / CHEFES · UM ENCONTRO A CADA CINCO SETORES</text>
+  <g>
+    <image href="SpaceInvaders-boss-dreadnought.svg" xlink:href="SpaceInvaders-boss-dreadnought.svg" x="74" y="545" width="450" height="240" preserveAspectRatio="xMidYMid meet"/>
+    <image href="SpaceInvaders-boss-carrier.svg" xlink:href="SpaceInvaders-boss-carrier.svg" x="573" y="545" width="450" height="240" preserveAspectRatio="xMidYMid meet"/>
+    <image href="SpaceInvaders-boss-leviathan.svg" xlink:href="SpaceInvaders-boss-leviathan.svg" x="1072" y="545" width="450" height="240" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+  <g font-family="Consolas,monospace" text-anchor="middle">
+    <text x="299" y="818" fill="#f0f1f3" font-size="14" letter-spacing="2">DREADNOUGHT</text><text x="299" y="841" fill="#aab0b7" font-size="10">rajadas · espiral · laser central que acompanha a nave</text>
+    <text x="798" y="818" fill="#f0f1f3" font-size="14" letter-spacing="2">AEGIS / PORTA-CAÇAS</text><text x="798" y="841" fill="#aab0b7" font-size="10">canhões laterais · rajada larga · laser duplo</text>
+    <text x="1297" y="818" fill="#f0f1f3" font-size="14" letter-spacing="2">LEVIATÃ DE CERCO</text><text x="1297" y="841" fill="#aab0b7" font-size="10">lança dirigida · espiral rápida · descarga múltipla</text>
+  </g>
+  <path d="M74 872H1526" stroke="#33363b"/>
+  <text x="74" y="904" fill="#9299a1" font-family="Consolas,monospace" font-size="11">Silhuetas próprias em aço grafite, painéis de blindagem e identificação rubra; sem reproduzir sprites de terceiros.</text>
+</svg>

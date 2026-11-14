@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 512" role="img" aria-labelledby="title desc">
+  <title id="title">Porta-caças Aegis</title><desc id="desc">Chefe espacial de comando e lançamento, asas largas, hangares protegidos e núcleo vermelho.</desc>
+  <defs>
+    <linearGradient id="hull" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#707277"/><stop offset=".18" stop-color="#34363a"/><stop offset=".62" stop-color="#17181c"/><stop offset="1" stop-color="#08090b"/></linearGradient>
+    <linearGradient id="wing" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#55575c"/><stop offset=".48" stop-color="#222428"/><stop offset="1" stop-color="#090a0c"/></linearGradient>
+    <linearGradient id="reactor" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ff725a"/><stop offset=".4" stop-color="#9d2631"/><stop offset="1" stop-color="#210f13"/></linearGradient>
+    <filter id="shadow" x="-.2" y="-.3" width="1.4" height="1.7"><feGaussianBlur stdDeviation="14"/></filter>
+  </defs>
+  <ellipse cx="512" cy="287" rx="430" ry="170" fill="#000" opacity=".58" filter="url(#shadow)"/>
+  <path d="m512 23 84 68 201 14 190 97-90 62 62 110-223-25-88 105-136-17-136 17-88-105-223 25 62-110-90-62 190-97 201-14z" fill="url(#wing)" stroke="#85878c" stroke-width="10" stroke-linejoin="round"/>
+  <path d="m512 42 55 69 168 15 157 72-73 54 50 80-184-17-78 76-95-13-95 13-78-76-184 17 50-80-73-54 157-72 168-15z" fill="url(#hull)" stroke="#4c4e53" stroke-width="7"/>
+  <path d="m512 54 61 64 45 107-25 132-81 90-81-90-25-132 45-107z" fill="#202126" stroke="#777a7e" stroke-width="8"/>
+  <path d="m512 77 48 53-15 76-33 34-33-34-15-76z" fill="#111216" stroke="#b02b36" stroke-width="7"/>
+  <path d="m512 93 25 28-8 38-17 19-17-19-8-38z" fill="url(#reactor)" stroke="#ff6b5a" stroke-width="5"/>
+  <g fill="#0d0e11" stroke="#85878b" stroke-width="7"><path d="m171 198 118-25 45 32-6 116-83 40-97-37z"/><path d="m853 198-118-25-45 32 6 116 83 40 97-37z"/></g>
+  <g fill="#17191c" stroke="#b1323c" stroke-width="6"><path d="m193 223 89-18 25 17-9 62-75 28-49-25z"/><path d="m831 223-89-18-25 17 9 62 75 28 49-25z"/></g>
+  <path d="m214 245 77-18m519 18-77-18" stroke="#f0444a" stroke-width="14"/>
+  <g fill="#24262b" stroke="#8b8d91" stroke-width="6"><path d="m365 294 41-17 43 17v77l-43 31-41-31z"/><path d="m575 294 43-17 41 17v77l-41 31-43-31z"/></g>
+  <g fill="#9d2731" stroke="#d7474b" stroke-width="5"><path d="m379 343h57v36l-28 22-29-22z"/><path d="m588 343h57v36l-29 22-28-22z"/></g>
+  <g fill="#aaff91" stroke="#e7f7dc" stroke-width="3"><circle cx="512" cy="151" r="10"/><circle cx="366" cy="229" r="7"/><circle cx="658" cy="229" r="7"/><circle cx="252" cy="177" r="6"/><circle cx="772" cy="177" r="6"/></g>
+  <g fill="#c5c7ca"><circle cx="104" cy="209" r="7"/><circle cx="920" cy="209" r="7"/><circle cx="151" cy="301" r="7"/><circle cx="873" cy="301" r="7"/><circle cx="455" cy="437" r="7"/><circle cx="569" cy="437" r="7"/></g>
+  <path d="m294 142 51 8m385-8-51 8m-465 68 53 10m585-10-53 10M428 244h168m-174 20h180" fill="none" stroke="#56595e" stroke-width="6"/>
+</svg>

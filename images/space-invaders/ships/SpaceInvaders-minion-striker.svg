@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 384" role="img" aria-labelledby="title desc">
+  <title id="title">Caça de ataque orbital</title><desc id="desc">Invasor de ataque pesado com asas blindadas, sensores e canhões integrados.</desc>
+  <defs>
+    <linearGradient id="hull" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#55565a"/><stop offset=".22" stop-color="#292a2e"/><stop offset="1" stop-color="#0a0b0d"/></linearGradient>
+    <linearGradient id="wing" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#3e4044"/><stop offset="1" stop-color="#101114"/></linearGradient>
+    <linearGradient id="lens" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ff5a4c"/><stop offset="1" stop-color="#5a151b"/></linearGradient>
+  </defs>
+  <ellipse cx="256" cy="217" rx="209" ry="92" fill="#000" opacity=".45"/>
+  <path d="m256 25 44 68 171 5-53 78 66 78-156-14-34 87h-76l-34-87-156 14 66-78-53-78 171-5z" fill="url(#wing)" stroke="#74767a" stroke-width="6" stroke-linejoin="round"/>
+  <path d="m256 42 25 57 125 12-40 52 41 54-121-13-17 84h-26l-17-84-121 13 41-54-40-52 125-12z" fill="url(#hull)" stroke="#4d4f53" stroke-width="4"/>
+  <path d="m256 43 23 49-23 27-23-27z" fill="#8f252e" stroke="#e24748" stroke-width="4"/>
+  <path d="m210 118 46-24 46 24 12 65-58 38-58-38z" fill="#17181b" stroke="#9a3035" stroke-width="5"/>
+  <path d="m231 128 25-17 25 17-5 34-20 13-20-13z" fill="url(#lens)" stroke="#e86a5d" stroke-width="3"/>
+  <path d="m76 144 103 5m-85 33 64 7m278-45-103 5m85 33-64 7" stroke="#a62a34" stroke-width="13"/>
+  <path d="m66 203 54-13v23l-54 13zm380 0-54-13v23l54 13z" fill="#101114" stroke="#74767a" stroke-width="4"/>
+  <path d="m83 209 24-5m322 5-24-5" stroke="#ff594a" stroke-width="6"/>
+  <path d="m210 246-11 47m103-47 11 47" stroke="#75777b" stroke-width="12" stroke-linecap="round"/>
+  <path d="m196 290 13 32m107-32-13 32" stroke="#e14343" stroke-width="8" stroke-linecap="round"/>
+  <g fill="#c6c7c9"><circle cx="145" cy="111" r="5"/><circle cx="367" cy="111" r="5"/><circle cx="183" cy="229" r="4"/><circle cx="329" cy="229" r="4"/></g>
+  <g fill="#111216" stroke="#8e9093" stroke-width="4"><rect x="177" y="282" width="24" height="37" rx="5"/><rect x="311" y="282" width="24" height="37" rx="5"/></g>
+</svg>

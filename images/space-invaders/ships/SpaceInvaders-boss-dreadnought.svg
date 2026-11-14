@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 512" role="img" aria-labelledby="title desc">
+  <title id="title">Nave-mãe Dreadnought</title><desc id="desc">Chefe original de assalto espacial, casco furtivo escuro, artilharia múltipla e marcações rubras.</desc>
+  <defs>
+    <linearGradient id="mainHull" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#595b60"/><stop offset=".16" stop-color="#292b30"/><stop offset=".6" stop-color="#151619"/><stop offset="1" stop-color="#08090b"/></linearGradient>
+    <linearGradient id="wingHull" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#393b40"/><stop offset=".55" stop-color="#17181c"/><stop offset="1" stop-color="#08090b"/></linearGradient>
+    <linearGradient id="reactor" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ed3e47"/><stop offset=".45" stop-color="#7b1b25"/><stop offset="1" stop-color="#171014"/></linearGradient>
+    <filter id="shadow" x="-.2" y="-.3" width="1.4" height="1.7"><feGaussianBlur stdDeviation="12"/></filter>
+  </defs>
+  <ellipse cx="512" cy="280" rx="420" ry="175" fill="#000" opacity=".58" filter="url(#shadow)"/>
+  <path d="m512 18 82 70 190 15 212 102-101 63 88 102-247-39-67 105-157-23-157 23-67-105-247 39 88-102-101-63 212-102 190-15z" fill="url(#wingHull)" stroke="#72757a" stroke-width="10" stroke-linejoin="round"/>
+  <path d="m512 36 55 66 161 14 180 90-82 49 72 75-213-31-67 91-106-19-106 19-67-91-213 31 72-75-82-49 180-90 161-14z" fill="url(#mainHull)" stroke="#4e5056" stroke-width="7"/>
+  <path d="m512 52 45 76 75 53 35 123-68 112-87 39-87-39-68-112 35-123 75-53z" fill="#202126" stroke="#85878b" stroke-width="7"/>
+  <path d="m512 72 56 57-16 72-40 35-40-35-16-72z" fill="#111216" stroke="#a62a35" stroke-width="7"/>
+  <path d="m512 91 31 35-9 42-22 21-22-21-9-42z" fill="url(#reactor)" stroke="#ec5351" stroke-width="5"/>
+  <path d="m255 154 128 14-39 32-124-18zm514 0-128 14 39 32 124-18z" fill="#8e2630"/>
+  <path d="m186 208 167 21m485-21-167 21" stroke="#777a7e" stroke-width="8"/>
+  <path d="m151 252 180 13m542-13-180 13" stroke="#b42b36" stroke-width="14"/>
+  <path d="m85 287 97-27 30 22-21 60-109 18-38-34zm854 0-97-27-30 22 21 60 109 18 38-34z" fill="#111216" stroke="#77797e" stroke-width="7"/>
+  <path d="m76 302 98-26m696 26-98-26" stroke="#ef4149" stroke-width="11"/>
+  <g fill="#191a1e" stroke="#86888c" stroke-width="6">
+    <path d="m314 331 44-21 36 20 4 72-44 29-43-20z"/><path d="m626 331 44-21 36 20-4 80-43 20-44-29z"/>
+    <path d="m475 313 37-17 37 17 0 94-37 29-37-29z"/>
+  </g>
+  <g fill="#7b2029" stroke="#ce4045" stroke-width="4"><path d="m325 380 63 0-3 25-29 25-31-15z"/><path d="m636 380 63 0 0 35-31 15-29-25z"/><path d="m488 383 48 0 0 34-24 18-24-18z"/></g>
+  <g fill="#aaff91" stroke="#e5f5d8" stroke-width="3"><circle cx="512" cy="154" r="11"/><circle cx="409" cy="249" r="7"/><circle cx="615" cy="249" r="7"/><circle cx="288" cy="199" r="6"/><circle cx="736" cy="199" r="6"/></g>
+  <g fill="#b7b9bd"><circle cx="217" cy="127" r="7"/><circle cx="807" cy="127" r="7"/><circle cx="138" cy="220" r="7"/><circle cx="886" cy="220" r="7"/><circle cx="288" cy="340" r="6"/><circle cx="736" cy="340" r="6"/><circle cx="455" cy="438" r="6"/><circle cx="569" cy="438" r="6"/></g>
+  <g fill="none" stroke="#55585e" stroke-width="5"><path d="m226 178 48 5m476-5-48 5M215 211l40 5m554-5-40 5M390 309l-32 24m276-24 32 24M476 256h72"/></g>
+</svg>

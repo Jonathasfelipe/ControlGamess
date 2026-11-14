@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 384" role="img" aria-labelledby="title desc">
+  <title id="title">Interceptor Víbora</title><desc id="desc">Caça inimigo leve e veloz com asas varridas, canhões frontais e acabamento militar escuro.</desc>
+  <defs>
+    <linearGradient id="hull" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#77797c"/><stop offset=".2" stop-color="#35373c"/><stop offset=".72" stop-color="#17191d"/><stop offset="1" stop-color="#090a0c"/></linearGradient>
+    <linearGradient id="wing" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4b4e52"/><stop offset=".6" stop-color="#1c1e22"/><stop offset="1" stop-color="#0a0b0d"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#b84249"/><stop offset="1" stop-color="#2a1115"/></linearGradient>
+    <filter id="shadow" x="-.3" y="-.3" width="1.6" height="1.6"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+  <ellipse cx="256" cy="212" rx="175" ry="102" fill="#000" opacity=".55" filter="url(#shadow)"/>
+  <path d="m256 16 39 89 163 57-79 54 54 94-123-29-36 62-18 9-18-9-36-62-123 29 54-94-79-54 163-57z" fill="url(#wing)" stroke="#85878b" stroke-width="6" stroke-linejoin="round"/>
+  <path d="m256 28 27 81 113 46-64 48 40 66-94-19-22 59-22-59-94 19 40-66-64-48 113-46z" fill="url(#hull)" stroke="#4d5055" stroke-width="5"/>
+  <path d="m256 43 30 67-30 45-30-45z" fill="#17191d" stroke="#b72e39" stroke-width="5"/>
+  <path d="m226 120 30-20 30 20-8 54-22 19-22-19z" fill="url(#glass)" stroke="#df5559" stroke-width="4"/>
+  <path d="m244 132 12-10 12 10-4 27-8 9-8-9z" fill="#a8ff8b"/>
+  <path d="m119 178 80 13-28 23-68-20zm274 0-80 13 28 23 68-20z" fill="#9c2731"/>
+  <path d="m91 213 78-11m252 11-78-11m-201 41 65-9m198 9-65-9" stroke="#a8aaad" stroke-width="5" stroke-linecap="round"/>
+  <g fill="#111216" stroke="#a4a6aa" stroke-width="4"><path d="m74 176 28-12 19 15-9 35-32 4-18-19z"/><path d="m438 176-28-12-19 15 9 35 32 4 18-19z"/></g>
+  <path d="m82 195 29-8m319 8-29-8" stroke="#f24b50" stroke-width="7"/>
+  <path d="m213 282-17 48m103-48 17 48" stroke="#7b202a" stroke-width="16" stroke-linecap="round"/>
+  <path d="m198 322 12 26m104-26-12 26" stroke="#ff6b4e" stroke-width="8" stroke-linecap="round"/>
+  <g fill="#c6c8ca"><circle cx="146" cy="153" r="5"/><circle cx="366" cy="153" r="5"/><circle cx="184" cy="270" r="4"/><circle cx="328" cy="270" r="4"/></g>
+</svg>

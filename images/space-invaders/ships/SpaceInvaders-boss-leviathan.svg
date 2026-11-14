@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 512" role="img" aria-labelledby="title desc">
+  <title id="title">Leviatã de Cerco</title><desc id="desc">Chefe de assalto alongado, blindagem em camadas, quatro canhões de energia e reator central.</desc>
+  <defs>
+    <linearGradient id="hull" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#686a6f"/><stop offset=".15" stop-color="#303237"/><stop offset=".62" stop-color="#16171b"/><stop offset="1" stop-color="#08090b"/></linearGradient>
+    <linearGradient id="armor" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#53555a"/><stop offset=".6" stop-color="#222429"/><stop offset="1" stop-color="#0a0b0d"/></linearGradient>
+    <radialGradient id="core"><stop stop-color="#fff0c5"/><stop offset=".22" stop-color="#ff7560"/><stop offset=".55" stop-color="#bd2936"/><stop offset="1" stop-color="#321116"/></radialGradient>
+    <filter id="shadow" x="-.2" y="-.3" width="1.4" height="1.7"><feGaussianBlur stdDeviation="13"/></filter>
+  </defs>
+  <ellipse cx="512" cy="282" rx="390" ry="165" fill="#000" opacity=".6" filter="url(#shadow)"/>
+  <path d="m512 18 65 90 246 11 146 105-100 62 40 91-205-19-80 111-112-37-112 37-80-111-205 19 40-91-100-62 146-105 246-11z" fill="url(#armor)" stroke="#85878b" stroke-width="10" stroke-linejoin="round"/>
+  <path d="m512 39 42 88 215 13 113 80-78 56 25 65-177-17-69 93-71-28-71 28-69-93-177 17 25-65-78-56 113-80 215-13z" fill="url(#hull)" stroke="#515359" stroke-width="8"/>
+  <path d="m512 42 68 88-26 167-42 91-42-91-26-167z" fill="#1d1f23" stroke="#a12b35" stroke-width="8"/>
+  <path d="m512 83 42 58-17 73-25 27-25-27-17-73z" fill="#111216" stroke="#b4343b" stroke-width="7"/>
+  <circle cx="512" cy="165" r="26" fill="url(#core)" stroke="#ff7762" stroke-width="6"/>
+  <g fill="#101114" stroke="#777a7f" stroke-width="7"><path d="m195 190 122-35 51 28-13 87-95 33-84-42z"/><path d="m829 190-122-35-51 28 13 87 95 33 84-42z"/><path d="m292 292 97-31 35 27-18 69-75 27-57-33z"/><path d="m732 292-97-31-35 27 18 69 75 27 57-33z"/></g>
+  <g fill="#8f2430" stroke="#d44a4e" stroke-width="5"><path d="m207 225 117-31-13 51-96 31z"/><path d="m817 225-117-31 13 51 96 31z"/><path d="m316 331 85-28-15 43-61 23z"/><path d="m708 331-85-28 15 43 61 23z"/></g>
+  <g fill="#a8ff91" stroke="#eef8e6" stroke-width="3"><circle cx="512" cy="165" r="7"/><circle cx="367" cy="231" r="8"/><circle cx="657" cy="231" r="8"/><circle cx="350" cy="325" r="6"/><circle cx="674" cy="325" r="6"/></g>
+  <g fill="#d0d1d3" stroke="#212226" stroke-width="4"><circle cx="242" cy="226" r="12"/><circle cx="782" cy="226" r="12"/><circle cx="353" cy="330" r="10"/><circle cx="671" cy="330" r="10"/></g>
+  <path d="m242 238v56m540-56v56m-429 51v46m376-46v46" stroke="#e94a4e" stroke-width="12" stroke-linecap="round"/>
+  <path d="m372 117 44 15m236-15-44 15m-274 36 35 10m306-10-35 10M442 247h140" fill="none" stroke="#5a5c61" stroke-width="6"/>
+</svg>
