@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Fronteira Estelar — armas e efeitos</title><desc id="desc">Conceito vetorial de ambientação, tiros, laser limitado, bomba com explosão curta e lasers de chefe.</desc>
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#13151a"/><stop offset="1" stop-color="#07080a"/></linearGradient>
+    <linearGradient id="space" x2="0" y2="1"><stop stop-color="#171c25"/><stop offset=".7" stop-color="#090b10"/><stop offset="1" stop-color="#08090b"/></linearGradient>
+    <linearGradient id="panel" x2="0" y2="1"><stop stop-color="#1c1e23"/><stop offset="1" stop-color="#0c0d10"/></linearGradient>
+    <radialGradient id="nebula"><stop stop-color="#6c3747" stop-opacity=".7"/><stop offset=".5" stop-color="#34394e" stop-opacity=".3"/><stop offset="1" stop-color="#171923" stop-opacity="0"/></radialGradient>
+    <radialGradient id="planet"><stop stop-color="#c4a98d"/><stop offset=".5" stop-color="#6c5351"/><stop offset="1" stop-color="#1a1b20"/></radialGradient>
+    <radialGradient id="blast"><stop stop-color="#fff5c2"/><stop offset=".18" stop-color="#ffc35e"/><stop offset=".42" stop-color="#f24d48"/><stop offset=".72" stop-color="#9c2231" stop-opacity=".55"/><stop offset="1" stop-color="#621b2a" stop-opacity="0"/></radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="7"/></filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <text x="38" y="48" fill="#f0f1f3" font-family="Consolas,monospace" font-size="25" font-weight="700" letter-spacing="4">ARMAS · AMBIENTAÇÃO · IMPACTO</text>
+  <text x="39" y="77" fill="#8f969f" font-family="Consolas,monospace" font-size="12" letter-spacing="2">PRANCHA DE COMBATE · TIROS INTERCEPTÁVEIS · LASER LIMITADO · BOMBAS ESPECIAIS</text>
+  <path d="M38 96H1562" stroke="#3a3d42"/>
+
+  <rect x="38" y="116" width="1524" height="340" rx="12" fill="url(#space)" stroke="#41454c"/>
+  <rect x="39" y="117" width="1522" height="338" rx="12" fill="url(#nebula)"/>
+  <g fill="#dfe7f1"><circle cx="78" cy="178" r="1.5"/><circle cx="152" cy="296" r="1"/><circle cx="233" cy="156" r="1.4"/><circle cx="340" cy="242" r="1"/><circle cx="428" cy="186" r="1.2"/><circle cx="515" cy="322" r="1.5"/><circle cx="625" cy="165" r="1"/><circle cx="720" cy="282" r="1.4"/><circle cx="837" cy="203" r="1"/><circle cx="930" cy="350" r="1.3"/><circle cx="1074" cy="176" r="1"/><circle cx="1195" cy="270" r="1.4"/><circle cx="1310" cy="155" r="1"/><circle cx="1435" cy="306" r="1.5"/><circle cx="1520" cy="204" r="1"/></g>
+  <circle cx="1250" cy="260" r="108" fill="url(#planet)" opacity=".58"/>
+  <ellipse cx="1250" cy="270" rx="162" ry="33" fill="none" stroke="#c8b59b" stroke-opacity=".38" stroke-width="3" transform="rotate(-12 1250 270)"/>
+  <g fill="#393432" stroke="#6c625d" stroke-opacity=".5"><path d="m218 347 12-27 19-4 17 22-11 29-29 5z"/><path d="m350 322 9-19 15 2 13 16-9 22-20 1z"/><path d="m1010 341 14-29 25-7 22 24-13 36-28 3z"/><path d="m1460 365 12-25 17-3 18 20-7 27-23 4z"/></g>
+  <g transform="translate(284 354) scale(.55)" fill="#202226" stroke="#a6323c" stroke-width="3"><path d="M50 2 60 25 96 46 87 59 63 51 58 66 50 72 42 66 37 51 13 59 4 46 40 25z"/><path d="m42 28 8-11 8 11-3 10h-10z" fill="#e5e7e9"/></g>
+  <text x="64" y="150" fill="#55ff9a" font-family="Consolas,monospace" font-size="12" letter-spacing="2">04 / CENÁRIO: NEBULOSA, ÓRBITA E DETRITOS</text>
+  <text x="64" y="423" fill="#b7bdc4" font-family="Consolas,monospace" font-size="11">Paleta espacial neutra; energia verde e vermelha destaca projéteis sem cobrir a leitura da nave.</text>
+
+  <rect x="38" y="478" width="935" height="478" rx="12" fill="url(#panel)" stroke="#41454c"/>
+  <text x="62" y="514" fill="#55ff9a" font-family="Consolas,monospace" font-size="12" letter-spacing="2">05 / ARMAS E PROJÉTEIS</text>
+  <g font-family="Consolas,monospace" text-anchor="middle">
+    <g transform="translate(130 568)"><path d="M0 78V8" stroke="#54ff98" stroke-width="6"/><circle cx="0" cy="8" r="7" fill="#f0fff1"/><text x="0" y="124" fill="#e4e6e8" font-size="11">PULSO</text><text x="0" y="142" fill="#8f969f" font-size="9">tiro simples</text></g>
+    <g transform="translate(300 568)"><path d="M-30 78-10 8M0 78V8M30 78 10 8" stroke="#91f36c" stroke-width="5"/><circle cx="-10" cy="8" r="4" fill="#fff"/><circle cy="8" r="4" fill="#fff"/><circle cx="10" cy="8" r="4" fill="#fff"/><text x="0" y="124" fill="#e4e6e8" font-size="11">LEQUE</text><text x="0" y="142" fill="#8f969f" font-size="9">três raias</text></g>
+    <g transform="translate(470 568)"><path d="M0 78V5" stroke="#e3293c" stroke-width="14" opacity=".2" filter="url(#glow)"/><path d="M0 78V5" stroke="#ef5359" stroke-width="8"/><path d="M0 72V8" stroke="#fff" stroke-width="2"/><text x="0" y="124" fill="#e4e6e8" font-size="11">LANÇA</text><text x="0" y="142" fill="#8f969f" font-size="9">impacto pesado</text></g>
+    <g transform="translate(640 568)"><path d="M0 79V10" stroke="#64e8ff" stroke-width="20" opacity=".2" filter="url(#glow)"/><path d="M0 78V9" stroke="#64e8ff" stroke-width="7"/><path d="M0 77V12" stroke="#f4ffff" stroke-width="2"/><path d="M-13 10h26" stroke="#55ff9a" stroke-width="3"/><text x="0" y="124" fill="#e4e6e8" font-size="11">LASER</text><text x="0" y="142" fill="#8f969f" font-size="9">liga / desliga · carga limitada</text></g>
+    <g transform="translate(820 568)"><path d="M0 78V22" stroke="#ff6b4f" stroke-width="3" stroke-dasharray="3 7"/><ellipse cx="0" cy="25" rx="12" ry="17" fill="#a62834" stroke="#ff7762" stroke-width="2"/><circle cx="0" cy="18" r="4" fill="#fff1cf"/><circle cx="0" cy="24" r="42" fill="url(#blast)" opacity=".85"/><text x="0" y="124" fill="#e4e6e8" font-size="11">BOMBARDEIO</text><text x="0" y="142" fill="#8f969f" font-size="9">3 cargas · blast curto</text></g>
+  </g>
+  <path d="M66 759H945" stroke="#36393f"/>
+  <g font-family="Consolas,monospace">
+    <text x="70" y="791" fill="#a9b0b8" font-size="11">CICLO DE UPGRADE</text>
+    <rect x="70" y="810" width="25" height="25" rx="3" fill="#55ff9a"/><text x="82.5" y="827" fill="#101216" font-size="11" font-weight="700" text-anchor="middle">L</text><text x="107" y="827" fill="#dfe2e5" font-size="10">laser</text>
+    <rect x="190" y="810" width="25" height="25" rx="3" fill="#55ff9a"/><text x="202.5" y="827" fill="#ff6872" font-size="11" font-weight="700" text-anchor="middle">B</text><text x="227" y="827" fill="#dfe2e5" font-size="10">bombardeio</text>
+    <rect x="360" y="810" width="25" height="25" rx="3" fill="#55ff9a"/><text x="372.5" y="827" fill="#101216" font-size="11" font-weight="700" text-anchor="middle">A</text><text x="397" y="827" fill="#dfe2e5" font-size="10">auxiliar · limite 2</text>
+    <text x="70" y="886" fill="#8f969f" font-size="10">Laser recarrega quando fica desligado ou quando outra arma está equipada.</text>
+  </g>
+
+  <rect x="991" y="478" width="571" height="478" rx="12" fill="url(#panel)" stroke="#41454c"/>
+  <text x="1015" y="514" fill="#55ff9a" font-family="Consolas,monospace" font-size="12" letter-spacing="2">06 / INTERCEPÇÃO E CHEFES</text>
+  <g font-family="Consolas,monospace">
+    <text x="1018" y="550" fill="#dce0e4" font-size="11">TIROS SE ANULAM NO IMPACTO</text>
+    <path d="M1048 589 1132 630" stroke="#55ff9a" stroke-width="7"/><path d="M1130 587 1050 631" stroke="#f0444a" stroke-width="7"/><path d="m1080 600 18 18m0-18-18 18" stroke="#fff" stroke-width="3"/><text x="1170" y="614" fill="#9098a1" font-size="10">verdes × rubros</text>
+    <text x="1018" y="678" fill="#dce0e4" font-size="11">LASER APAGA PROJÉTEIS</text>
+    <path d="M1030 713H1215" stroke="#64e8ff" stroke-width="14" opacity=".25" filter="url(#glow)"/><path d="M1030 713H1215" stroke="#64e8ff" stroke-width="5"/><circle cx="1118" cy="713" r="8" fill="#f0444a"/><path d="m1106 701 24 24m0-24-24 24" stroke="#fff" stroke-width="2"/><text x="1238" y="717" fill="#9098a1" font-size="10">qualquer projétil interceptado</text>
+    <text x="1018" y="772" fill="#dce0e4" font-size="11">LASER DO CHEFE</text>
+    <path d="M1295 786V895" stroke="#fa5360" stroke-width="15" opacity=".24" filter="url(#glow)"/><path d="M1295 786V895" stroke="#fa5360" stroke-width="5"/><path d="m1270 788 25-20 25 20" fill="#292b30" stroke="#aeb1b5" stroke-width="3"/>
+    <path d="M1385 786V895M1435 786V895M1485 786V895" stroke="#fa5360" stroke-width="4" opacity=".8"/><path d="m1435 786-50 10m50-10 50 10" stroke="#91969e" stroke-width="2" stroke-dasharray="4 4"/><text x="1290" y="924" fill="#9098a1" font-size="9" text-anchor="middle">centro que acompanha</text><text x="1435" y="924" fill="#9098a1" font-size="9" text-anchor="middle">ultimate em leque</text>
+  </g>
+</svg>
