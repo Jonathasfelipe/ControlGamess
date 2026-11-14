@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#070d18">
+  <title>Perdidos no Espaço — Defesa Orbital</title>
+  <link rel="stylesheet" href="../../src/styles/space-invaders.css">
+</head>
+<body>
+<main id="startMenu" class="scene" aria-label="Menu de Perdidos no Espaço">
+    <div class="background-canvas"><canvas id="bgCanvas"></canvas></div>
+    <div class="frame">
+      <section class="copy">
+        <div class="eyebrow">Defesa orbital</div>
+        <h1>Perdidos<span>no Espaço</span></h1>
+        <p class="subtitle">A última linha de defesa começa aqui. Prepare sua nave, atravesse a galáxia e enfrente a frota invasora.</p>
+        <div class="menu-actions"><button class="start" id="startGame" type="button">INICIAR JOGO</button></div>
+      </section>
+      <section class="art" id="artLayer"></section>
+    </div>
+    <div class="loading" id="loading">Preparando a frota…</div>
+  </main>
+  <main id="gameView" class="arcade" hidden>
+    <header class="topbar">
+      <div class="brand"><span class="mark" aria-hidden="true">▣</span><div><h1>PERDIDOS NO ESPAÇO</h1><p class="subtitle">Defesa orbital · pixel arcade</p></div></div>
+      
+    </header>
+    <section class="hud" aria-label="Status da partida">
+      <div class="stat" data-hud="score"><span class="stat-label">Pontos</span><span id="score" class="stat-value cyan">000000</span></div>
+      <div class="stat" data-hud="lives"><span class="stat-label">Naves</span><span id="lives" class="stat-value">3</span></div>
+      <div class="stat" data-hud="wave"><span class="stat-label">Setor</span><span id="wave" class="stat-value gold">01</span></div>
+      <div class="stat" data-hud="weapon"><span class="stat-label">Arma</span><span id="weapon" class="stat-value">PULSO</span></div>
+      <div class="stat" data-hud="shield"><span class="stat-label">Escudos</span><span id="shield" class="stat-value gold">0</span></div>
+    </section>
+    <section class="stage" aria-label="Área de jogo">
+      <div id="backgroundSolarSystems" class="background-solar-systems" aria-hidden="true"></div>
+      <div id="boss-black-hole" class="black-hole-wrapper" aria-hidden="true" hidden>
+        <div class="accretion-disk-back"></div>
+        <div class="event-horizon"></div>
+        <div class="accretion-disk-front"></div>
+        <div id="black-hole-particles"></div>
+      </div>
+      <canvas id="game" width="960" height="540" tabindex="0" aria-label="Perdidos no Espaço: jogador 1 usa as setas e Espaço; jogador 2 entra com Enter, move com WASD e atira com zero do teclado numérico"></canvas>
+      <div id="bossMeter" class="boss-meter"><div class="boss-caption"><span id="bossTitle">DREADNOUGHT · NAVE-MÃE</span><span id="bossHpLabel">100%</span></div><div class="bar"><div id="bossHp" class="bar-fill"></div></div></div>
+      <div id="playHud" class="play-hud" hidden aria-label="HUD cooperativa">
+        <div class="play-hud-panel player-corner left" aria-label="HUD do jogador 1">
+          <span class="player-tag">JOGADOR 1 · SETAS</span>
+          <div class="play-stat" data-live-hud="score"><small>Pontos</small><strong id="playScore" class="green">000000</strong></div>
+          <div class="play-stat" data-live-hud="lives"><small>Naves</small><strong id="playLives">3</strong></div>
+        </div>
+        <div class="play-hud-panel player-corner right" aria-label="HUD do jogador 2">
+          <button id="player2StartBtn" class="player2-start" type="button" aria-label="Jogador 2, pressione Enter para entrar">PRESS START <small>ENTER</small></button>
+          <div id="player2Stats" class="player2-stats" hidden>
+            <span class="player-tag">JOGADOR 2 · WASD / NUM 0</span>
+            <div class="play-stat" data-live-hud="score"><small>Pontos</small><strong id="playScore2" class="gold">000000</strong></div>
+            <div class="play-stat" data-live-hud="lives"><small>Naves</small><strong id="playLives2">0</strong></div>
+          </div>
+        </div>
+        <div class="play-hud-panel shared" aria-label="Recursos da missão">
+          <div class="play-stat" data-live-hud="wave"><small>Setor</small><strong id="playWave" class="red">01</strong></div>
+          <div class="play-stat" data-live-hud="weapon"><small>Arma P1</small><strong id="playWeapon">PULSO</strong></div>
+          <div class="play-stat" data-live-hud="shield"><small>Escudo P1</small><strong id="playShield" class="green">0</strong></div>
+          <div class="play-stat" data-live-hud="bombs"><small>Bombas</small><strong id="playBombs" class="red">2</strong></div>
+          <div class="play-stat" data-live-hud="auxiliaries"><small>Auxiliares P1</small><strong id="playAux">0/8</strong></div>
+          <div class="play-stat" data-live-hud="overdrive"><small>Overdrive P1</small><strong id="playOverdrive">—</strong></div>
+          <button id="playBombBtn" class="play-hud-control" aria-label="Usar bomba universal de emergência">BOMBA X</button>
+          <button id="playSpecialBtn" class="play-hud-control" aria-label="Usar especial da nave" hidden>ESPECIAL C</button>
+        </div>
+      </div>
+      <div id="overlay" class="overlay">
+        <div class="dialog">
+          <section id="menuMain" class="menu-view"><p class="eyebrow">CONTROL GAMES · ARCADE ORIGINAL</p><h2>PERDIDOS NO ESPAÇO</h2><p>Uma frota desconhecida avança pelo setor. Escolha uma missão e defenda a órbita.</p><div class="menu-list"><button id="newGameBtn" class="btn primary">INICIAR JOGO</button><button id="continueBtn" class="btn" disabled>CONTINUAR</button><button id="tutorialBtn" class="btn">APRENDER A JOGAR</button><button id="overviewBtn" class="btn">COMO FUNCIONA</button><button id="controlsBtn" class="btn">CONTROLES</button><button id="settingsBtn" class="btn">CONFIGURAÇÕES</button><button id="skinsBtn" class="btn">HANGAR · NAVES</button></div></section>
+          <section id="menuTutorial" class="menu-view guide-view" hidden><p class="eyebrow">ACADEMIA DE PILOTOS</p><h2>APRENDER A JOGAR</h2><p class="guide-intro">Prepare-se para defender a fronteira. Siga estes passos para começar:</p><div class="guide-cards"><article class="guide-card"><strong>01 · ESCOLHA UMA CLASSE</strong>ExoFighter acelera e pressiona o ataque; ExoTank aguenta dano; ExoGuard converte defesa em contra-ataque. As duas naves de cada classe compartilham o mesmo especial.</article><article class="guide-card"><strong>02 · MOVA-SE E ATAQUE</strong>Jogador 1 usa as setas e Espaço. Para entrar, jogador 2 pressiona Enter; depois usa WASD e Zero do teclado numérico para atirar. Z alterna as armas do jogador 1.</article><article class="guide-card"><strong>03 · SOBREVIVA À FROTA</strong>Após cada chefe principal, sobreviva por 60 segundos à chuva de meteoritos, desviando dos impactos. Em seguida, a campanha retoma as ondas normais.</article><article class="guide-card"><strong>04 · APROVEITE OS RECURSOS</strong>Inimigos podem soltar caixas com armas e melhorias aleatórias; a chance de encontrar uma aumenta a cada estágio. X usa uma bomba universal de emergência; C ativa o especial próprio da classe.</article><article class="guide-card wide"><strong>05 · COMPLETE A CAMPANHA</strong>Proteja suas naves e avance pelos 100 setores. O progresso é salvo automaticamente durante a partida e ao pausar.</article></div><div class="actions"><button id="tutorialBackBtn" class="btn primary">VOLTAR AO MENU</button></div></section>
+          <section id="menuOverview" class="menu-view guide-view" hidden><p class="eyebrow">RESUMO DA MISSÃO</p><h2>COMO FUNCIONA</h2><p class="guide-intro">Perdidos no Espaço é um arcade cooperativo de sobrevivência em que cada setor traz novas formações, padrões de ataque e ameaças.</p><div class="guide-cards"><article class="guide-card"><strong>OBJETIVO</strong>Sobrevivam aos 100 setores, derrotem as naves-mãe e alcancem a vitória final.</article><article class="guide-card"><strong>PROGRESSÃO</strong>Eliminem grupos para abrir caminho. Mini-chefes aparecem em setores de risco; chefes aguardam no setor 5 e depois a cada dez setores.</article><article class="guide-card"><strong>APRIMORAMENTOS</strong>Caixas aleatórias podem liberar leque, lança, laser, bombardeio, disparo rápido, munição, escudos, bombas de emergência ou naves auxiliares. A chance de drop aumenta a cada estágio.</article><article class="guide-card"><strong>RECURSOS DE COMBATE</strong>A bomba X remove projéteis inimigos, elimina a formação comum e causa dano às naves-mãe. O especial C é exclusivo da classe do jogador 1.</article><article class="guide-card"><strong>EXOFIGHTER · PULSO VETORIAL</strong>Dispara um pulso frontal que causa dano em área e ativa 5 s de Overdrive: movimentação 35% mais rápida e disparos 45% mais frequentes. Recarga: 26 s.</article><article class="guide-card"><strong>EXOTANK · BASTIÃO DE CERCO</strong>Ergue uma blindagem por até 8 s ou 9 impactos. Ao acabar, detona; o raio e o dano crescem com os impactos absorvidos. Recarga: 23 s.</article><article class="guide-card wide"><strong>EXOGUARD · PRISMA REVERSOR</strong>Por até 5,5 s ou 4 impactos, absorve projéteis e os devolve como disparos refletidos contra a frota, finalizando com uma descarga ciano. Recarga: 19 s.</article></div><div class="actions"><button id="overviewBackBtn" class="btn primary">VOLTAR AO MENU</button></div></section>
+          <section id="menuControls" class="menu-view guide-view" hidden><p class="eyebrow">GUIA DE COMANDO</p><h2>CONTROLES</h2><p class="guide-intro">O jogador 1 começa sozinho. O jogador 2 pode entrar a qualquer momento com Enter ou pelo botão PRESS START; pressione P ou Escape para pausar.</p><div class="control-list"><div class="control-row"><kbd>JOGADOR 1 · TECLADO</kbd><span>Use as setas ou WASD para mover a nave. Escolha o conjunto de teclas nas configurações.</span></div><div class="control-row"><kbd>ESPAÇO · SEGURAR</kbd><span>Jogador 1 dispara. Com o laser equipado, pressione para ligar ou desligar o feixe contínuo.</span></div><div class="control-row"><kbd>ENTER · START P2</kbd><span>Inserir o jogador 2 na partida.</span></div><div class="control-row"><kbd>JOGADOR 2 · W A S D</kbd><span>Mover a nave do jogador 2 em oito direções.</span></div><div class="control-row"><kbd>NUM 0 · SEGURAR</kbd><span>Jogador 2 dispara com o blaster usando o zero do teclado numérico.</span></div><div class="control-row"><kbd>Z</kbd><span>Jogador 1 alterna entre as armas desbloqueadas.</span></div><div class="control-row"><kbd>X</kbd><span>Usar uma bomba de emergência: remove projéteis inimigos, elimina inimigos comuns e causa dano ao chefe.</span></div><div class="control-row"><kbd>C</kbd><span>Ativar o especial da classe do jogador 1: pulso frontal Fighter, Bastião ou Prisma.</span></div><div class="control-row"><kbd>P · ESC</kbd><span>Pausar ou retomar a partida. Para voltar ao jogo, use P ou Escape, ou clique em Retomar no menu.</span></div><div class="control-row"><kbd>MOUSE · MIRA</kbd><span>Mover o mouse controla somente a retícula e direciona os disparos. A nave não segue o mouse; mova-a com as teclas escolhidas nas configurações.</span></div><div class="control-row"><kbd>TOQUE E ARRASTE</kbd><span>No celular, conduza a nave do jogador 1 pela tela. Use os botões da HUD para bomba e especial.</span></div></div><div class="actions"><button id="controlsBackBtn" class="btn primary">VOLTAR AO MENU</button></div></section>
+          <section id="menuPause" class="menu-view menuPause" hidden><p class="eyebrow">JOGO PAUSADO</p><h2>PERDIDOS NO ESPAÇO</h2><p>Partida pausada. Escolha uma opção para continuar.</p><div class="menu-list"><button id="resumeBtn" class="btn primary">RETOMAR</button><button id="saveCheckpointBtn" class="btn">SALVAR CHECKPOINT</button><button id="stageSelectPauseBtn" class="btn" data-stage-select-trigger>SELECIONAR ESTÁGIO</button><button id="pauseSettingsBtn" class="btn">CONFIGURAÇÕES</button><button id="pauseRankingBtn" class="btn">RANKING LOCAL</button><button id="restartGameBtn" class="btn">REINICIAR JOGO</button><button id="homeBtn" class="btn">SAIR</button></div><p id="checkpointFeedback" class="checkpoint-feedback" role="status" aria-live="polite" hidden></p></section><section id="menuRanking" class="menu-view" hidden><p class="eyebrow">PLACAR DESTE NAVEGADOR</p><h2>RANKING LOCAL</h2><p>Melhor pontuação registrada neste navegador.</p><div class="ranking-list"><div class="ranking-row"><span>RECORDE LOCAL</span><strong id="rankingHighScore">000000</strong></div></div><div class="actions"><button id="rankingBackBtn" class="btn primary">VOLTAR À PAUSA</button></div></section>
+          <section id="menuSettings" class="menu-view" hidden><p class="eyebrow">AJUSTE A MISSÃO</p><h2>CONFIGURAÇÕES</h2><div class="menu-options"><label class="option-row" for="difficulty">Dificuldade<select id="difficulty"><option value="normal">Padrão</option><option value="easy">Explorador</option><option value="hard">Veterano</option></select></label><label class="option-row" for="aimMode">Modo de mira<select id="aimMode"><option value="classic">Modo Clássico: tiros para frente</option><option value="free">Mira Livre: mouse ou analógico direito</option></select></label><label class="option-row" for="movementKeys">Teclas de movimento do jogador 1<select id="movementKeys"><option value="arrows">Setas</option><option value="wasd">WASD</option></select></label><div class="option-row">Informações na HUD</div><div class="hud-options"><label class="hud-toggle"><input type="checkbox" data-hud-toggle="score" checked> Pontos</label><label class="hud-toggle"><input type="checkbox" data-hud-toggle="lives" checked> Naves</label><label class="hud-toggle"><input type="checkbox" data-hud-toggle="wave" checked> Setor</label><label class="hud-toggle"><input type="checkbox" data-hud-toggle="weapon" checked> Arma</label></div><label class="hud-toggle"><input id="particlesToggle" type="checkbox" checked> Efeitos de impacto</label><button id="settingsFullscreenBtn" class="btn">TELA CHEIA</button></div><div class="actions"><button id="settingsBackBtn" class="btn primary">VOLTAR</button></div></section>
+          <section id="menuSkins" class="menu-view" hidden><p class="eyebrow">HANGAR ORBITAL</p><h2>ESCOLHA SUA NAVE</h2><p>ExoFighter — Overdrive Vetorial: por 5 s, movimento 35% mais rápido e cadência 45% maior, sem invulnerabilidade (C, recarga 26 s). ExoTank — Bastião de Cerco: blindagem de até 8 s ou 9 impactos, com detonação reforçada pelos impactos absorvidos (C, 23 s). ExoGuard — Prisma Reversor: até 5,5 s ou 4 impactos; devolve projéteis absorvidos e termina com uma descarga ciano (C, 19 s). As duas naves de cada classe compartilham o especial. A bomba X é um recurso universal separado.</p><div class="skin-list"><button class="skin-choice" data-skin="0"><img class="skin-preview" src="../../assets/images/space-invaders/ships/SpaceInvaders-ship-fighter-exo-blue-preview.png" alt=""><span class="skin-name">1 · ExoFighter Azul</span></button><button class="skin-choice" data-skin="1"><img class="skin-preview" src="../../assets/images/space-invaders/ships/SpaceInvaders-ship-fighter-exo-green-preview.png" alt=""><span class="skin-name">2 · ExoFighter Verde</span></button><button class="skin-choice" data-skin="2"><img class="skin-preview" src="../../assets/images/space-invaders/ships/SpaceInvaders-ship-tank-crimson-preview.png" alt=""><span class="skin-name">3 · ExoTank Carmesim</span></button><button class="skin-choice" data-skin="3"><img class="skin-preview" src="../../assets/images/space-invaders/ships/SpaceInvaders-ship-guard-cyan-barrier-preview.png" alt=""><span class="skin-name">4 · ExoGuard Ciano</span></button><button class="skin-choice" data-skin="4"><img class="skin-preview" src="../../assets/images/space-invaders/ships/SpaceInvaders-ship-tank-amber-preview.png" alt=""><span class="skin-name">5 · ExoTank Âmbar</span></button><button class="skin-choice" data-skin="5"><img class="skin-preview" src="../../assets/images/space-invaders/ships/SpaceInvaders-ship-guard-blue-barrier-preview.png" alt=""><span class="skin-name">6 · ExoGuard Azul</span></button></div><div class="actions"><button id="skinsBackBtn" class="btn primary">VOLTAR</button></div></section>
+          <section id="menuOver" class="menu-view" hidden><p class="eyebrow">FIM DE MISSÃO</p><h2>FROTA ABATIDA</h2><p id="finalSummary">Pontuação final: 0.</p><div class="menu-list"><button id="retryBtn" class="btn primary">TENTAR NOVAMENTE</button><button id="gameOverMenuBtn" class="btn">SAIR</button></div></section>
+          <section id="menuStageSelect" class="menu-view guide-view stage-select-view" hidden><p class="eyebrow">MODO ADMINISTRATIVO · TESTES</p><h2>SELECIONAR ESTÁGIO</h2><p class="guide-intro">Estágios acima do maior checkpoint ficam bloqueados. A seleção inicia uma nova partida com recursos padrão.</p><p id="stageProgressSummary" class="stage-progress-summary" role="status" aria-live="polite"></p><div id="stageSelectGrid" class="stage-select-grid" aria-label="Estágios disponíveis"></div><div class="actions"><button id="resetStageProgressBtn" class="btn danger">RESETAR PROGRESSO</button><button id="stageSelectBackBtn" class="btn primary">VOLTAR</button></div></section>
+        </div>
+      </div>
+    </section>
+    <footer class="bottom"><div class="help"><strong>P1: ← ↑ → ↓ + ESPAÇO</strong> mover e disparar · <strong>P2: ENTER + W A S D + NUM 0</strong> entrar, mover e disparar · <strong>Z</strong> armas P1 · <strong>X</strong> bomba · <strong>C</strong> especial P1 · <strong>P</strong> pausar<br>Caixas aleatórias liberam armas e melhorias; a chance de drop aumenta por estágio. No celular, arraste para conduzir e disparar com o P1.</div><div class="tools"><button id="fullBtn" class="btn">TELA CHEIA</button><button id="restartBtn" class="btn">RECOMEÇAR</button></div></footer>
+    <div class="mobile" aria-label="Controles de toque"><button data-key="ArrowLeft" aria-label="Mover para a esquerda">◀</button><button data-key="ArrowUp" aria-label="Mover para a frente">▲</button><button data-key="Space" aria-label="Atirar">●</button><button data-key="ArrowDown" aria-label="Mover para trás">▼</button><button data-key="ArrowRight" aria-label="Mover para a direita">▶</button></div>
+    <section id="creditsScreen" class="credits-screen" hidden role="dialog" aria-modal="true" aria-labelledby="creditsTitle" tabindex="-1">
+      <div class="credits-stars" aria-hidden="true"></div>
+      <div class="credits-shell">
+        <header class="credits-header"><span>CONTROL GAMES · ARCADE ORIGINAL</span><span>MISSÃO 100/100</span><span>PONTOS <strong id="creditsFinalScore">000000</strong></span></header>
+        <div class="credits-roll-window" role="region" tabindex="0" aria-label="Créditos finais">
+          <div id="creditsRoll" class="credits-roll">
+            <div class="credits-title-block">
+              <p class="credits-kicker">MISSÃO CUMPRIDA</p>
+              <h1 id="creditsTitle">PERDIDOS NO ESPAÇO</h1>
+              <p class="credits-subtitle">Missão Cumprida — O Universo Está Salvo</p>
+              <span class="credits-star-divider" aria-hidden="true">✦　✦　✦</span>
+            </div>
+            <section class="credits-block">
+              <h2>EQUIPE DE PRODUÇÃO E DESENVOLVIMENTO</h2>
+              <p><strong>Criador, Diretor e Programador Principal</strong><span>Jonas Felipe</span><small>A mente criativa e chave principal do projeto.</small></p>
+              <p><strong>Nova IA Pessoal · Colaboração Estratégica</strong><span>Elliot</span></p>
+              <p><strong>Assistência de Engenharia de Código e Lógica</strong><span>ChatGPT e Gemini</span></p>
+            </section>
+            <section class="credits-block credits-thanks">
+              <h2>AGRADECIMENTOS ESPECIAIS</h2>
+              <p>A todos os jogadores que desbravaram as 100 ondas, enfrentaram os mini-bosses, dominaram o sistema <strong>Press Start</strong> do Player 2 e pilotaram com maestria os Exo Guards, Tanks e Fighters.</p>
+            </section>
+            <div class="credits-end">
+              <span class="credits-star-divider" aria-hidden="true">✦　✦　✦</span>
+              <p>Obrigado por jogar!</p>
+              <p>Continue explorando novas fronteiras.</p>
+              <small>FIM DA TRANSMISSÃO</small>
+            </div>
+          </div>
+        </div>
+        <footer class="credits-actions"><button id="creditsReplayBtn" class="btn primary">JOGAR NOVAMENTE</button><button id="creditsMenuBtn" class="btn">MENU PRINCIPAL</button></footer>
+      </div>
+    </section>
+  </main>
+  <script src="../../src/scripts/space-invaders/audio.js" defer></script>
+  <script src="../../src/scripts/space-invaders/game.js" defer></script>
+  <script src="../../src/scripts/space-invaders/visual-fix.js" defer></script>
+  <script src="../../src/scripts/space-invaders/menu.js" defer></script>
+</body>
+</html>
