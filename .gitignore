@@ -1,0 +1,18 @@
+# Dependências (o projeto não usa npm, mas evita inclusões acidentais)
+node_modules/
+npm-debug.log*
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores e IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Arquivos temporários
+*.tmp
+*.log
